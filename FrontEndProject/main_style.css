@@ -1,18 +1,72 @@
+/* CSS - Cascading Style Sheet */
+/* Palette color codes */
+/* Palette URL: http://paletton.com/#uid=5210L0kWbOXPabAPfkvgfGW6VMQ */
+
+/* Feel free to copy&paste color codes to your application */
+
+
+/* As hex codes */
+
+.color-primary-0 { background-color: #E2FD00 }	/* Main Primary color */
+.color-primary-1 { background-color: #515A00 }
+.color-primary-2 { background-color: #8FA000 }
+.color-primary-3 { background-color: #EEFC7C }
+.color-primary-4 { background-color: #F7FDC6 }
+
+.color-secondary-1-0 { color: #FFC700 }	/* Main Secondary color (1) */
+.color-secondary-1-1 { color: #5C4800 }
+.color-secondary-1-2 { color: #A38000 }
+.color-secondary-1-3 { color: #FFE37E }
+.color-secondary-1-4 { color: #FFF3C8 }
+
+.color-secondary-2-0 { color: #20EE00 }	/* Main Secondary color (2) */
+.color-secondary-2-1 { color: #0A4C00 }
+.color-secondary-2-2 { color: #128700 }
+.color-secondary-2-3 { color: #80E370 }
+.color-secondary-2-4 { color: #C0ECB9 }
+
+.color-nav-hover {
+  background-color: #FFC700;
+  color: #5C4800;
+}
+
 body {
   margin: 0;
   padding: 0;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic,sans-serif;
+}
+.main-wrapper {
+  width: 75%;
+  height: 200px;
+  margin: 0 auto;
+}
+header {
+  color: white;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+nav ul li {
+  display: inline;
+}
+section {
+
 }
 footer {
   position: fixed;
   width: 75%;
-  height: 25px;
+  height: 0px;
   margin-left: -37.5%;
   left: 50%;
   bottom: 0;
-  background-color: #cc4499;
-  font: 24px Verdana sans-serif;
   font-weight: bolder;
+  font-size: 1.8em;
   text-align: center;
-  line-height: 125px;
+
   opacity: 0.50;
 }
