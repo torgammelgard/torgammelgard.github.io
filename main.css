@@ -1,0 +1,43 @@
+/* CSS - Cascading Style Sheet */
+/* Palette color codes */
+/* Palette URL: http://paletton.com/#uid=3210u0kwi++bu++hX++++rd++kX */
+
+/* Feel free to copy&paste color codes to your application */
+
+
+/* As hex codes */
+
+.color-primary-0 { background-color: #E4FF00 }	/* Main Primary color */
+.color-primary-1 { background-color: #F5FFA4 }
+.color-primary-2 { color: #F0FF70 }
+.color-primary-3 { color: #BDD400 }
+.color-primary-4 { color: #92A300 }
+
+.color-secondary-1-0 { color: #FF0067 }	/* Main Secondary color (1) */
+.color-secondary-1-1 { color: #FFA4C8 }
+.color-secondary-1-2 { color: #FF70AA }
+.color-secondary-1-3 { color: #BA004B }
+.color-secondary-1-4 { color: #8F003A }
+
+.color-secondary-2-0 { color: #6A19FF }	/* Main Secondary color (2) */
+.color-secondary-2-1 { color: #CAACFF }
+.color-secondary-2-2 { color: #AB7EFF }
+.color-secondary-2-3 { color: #340094 }
+.color-secondary-2-4 { color: #280072 }
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.main_wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+h1, h2 {
+  text-align: center;
+}
+#project_list {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+}
