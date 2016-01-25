@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+footer {
+  position: fixed;
+  width: 75%;
+  height: 25px;
+  margin-left: -37.5%;
+  left: 50%;
+  bottom: 0;
+  background-color: #cc4499;
+  font: 24px Verdana sans-serif;
+  font-weight: bolder;
+  text-align: center;
+  line-height: 125px;
+  opacity: 0.50;
+}
