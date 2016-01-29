@@ -33,30 +33,108 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Century Gothic", CenturyGothic, AppleGothic,sans-serif;
+  font-family: "Century Gothic", "CenturyGothic", "AppleGothic", sans-serif;
 }
 .main-wrapper {
-  width: 75%;
+  width: 100%;
   height: 200px;
   margin: 0 auto;
 }
 header {
   color: white;
+  height: 60px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: flex-start;
 }
-nav ul {
+nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+
+  /*position: relative;*/
+}
+header img {
+  height: 60px;
+  padding-left: 30px;
+  padding-right: 10px;
+}
+header nav ul {
+  display: inline-flex;
+  align-items: stretch;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
+  font-size: 1.2em;
 }
-nav ul li {
-  display: inline;
+header nav ul li {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  line-height: 60px;
+}
+div[class^="menu-dropdown"] {
+  width: 96%;
+  height: 200px;
+  left: 2%;
+  background-color: #FFC700;
+  position: absolute;         /* relative header */
+  display: none;
 }
 section {
 
 }
+section h1 {
+  font-size: 2.0em;
+  text-align: center;
+}
+section h2 {
+  font-size: 1.4em;
+  text-align: center;
+}
+aside {
+
+}
+form {
+  border: 1px solid red;
+}
+
+.image-info-area {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 61%;
+  margin: 25px auto;
+  margin-bottom: 50px;
+}
+.image-info-item {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-top: 10px;
+  background: #ccc url('sun-icon.png') center no-repeat;
+  overflow: hidden;
+}
+.image-info-textarea {
+  position: absolute;
+  height: 200px;
+  background-color: rgba(150, 150, 150, 0.3);
+}
+.cool-border {
+  border: 2px solid red;
+}
+
 footer {
   position: fixed;
   width: 75%;
@@ -67,6 +145,8 @@ footer {
   font-weight: bolder;
   font-size: 1.8em;
   text-align: center;
-
   opacity: 0.50;
+}
+a {
+  text-decoration: none;
 }
