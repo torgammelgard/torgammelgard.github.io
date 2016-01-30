@@ -46,6 +46,10 @@ function init_listeners() {
     $(this).stop();
     $(this).animate({height: '25px', opacity: 0.5}, {duration: 800});
   });
+  $('#footer').on('focus', function() {
+    $(this).stop();
+    $(this).animate({height: '25px', opacity: 0.5}, {duration: 800});
+  });
 
   // Navigation
   $('nav').find('li').on('mouseover', function() {
