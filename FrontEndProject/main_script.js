@@ -5,6 +5,17 @@ $(document).ready(function() {
   init_form();
 });
 
+/* Data - Planet information */
+var planets = [
+    {name: 'Mercury', radius: 2440, url: 'res/mercury.jpg'},
+    {name: 'Venus', radius: 6052, url: 'res/venus.jpg'},
+    {name: 'Earth', radius: 6378, url: 'res/earth.jpg'},
+    {name: 'Mars', radius: 3397, url: 'res/mars.jpg'},
+    {name: 'Jupiter', radius: 71492, url: 'res/jupiter.jpg'},
+    {name: 'Saturn', radius: 60268, url: 'res/saturn.jpg'},
+    {name: 'Uranus', radius: 25559, url: 'res/uranus.jpg'},
+    {name: 'Neptune', radius: 24766, url: 'res/neptune.jpg'}];
+
 var image_info_div_bottom = {bottom: '-150px'};
 
 /* Creates an sliding effect (upwards) on the footer */
@@ -12,9 +23,16 @@ function init_footer() {
   $('footer').animate({height: '25px'}, {duration: 1000});
 }
 
+
+
 function init_image_infos() {
   $('.image-info-textarea').css(image_info_div_bottom);
   $('.image-info-textarea').css({opacity: '0.25'});
+  var image_items = $('.image-info-item');
+  for (var index in planets) {
+    $(image_items[index]).css({background: "url('" + planets[index].url + "') no-repeat center/200px"});
+    console.log(index);
+  }
 }
 /* Adds event listeners to some elements for effect etc */
 function init_listeners() {
@@ -63,21 +81,20 @@ function init_listeners() {
   });
 }
 
-/* Data - Planet information */
-var planets = [
-    {name: 'Mercury', radius: 2440},
-    {name: 'Venus', radius: 6052},
-    {name: 'Earth', radius: 6378},
-    {name: 'Mars', radius: 3397},
-    {name: 'Jupiter', radius: 71492},
-    {name: 'Saturn', radius: 60268},
-    {name: 'Uranus', radius: 25559},
-    {name: 'Neptune', radius: 24766}];
-
 /* Fills the selection form with data by appending option tags */
 function init_form() {
   var selection = $('#planet_selection');
   for (var planet of planets) {
     $("<option>" + planet.name + "</option>").appendTo(selection);
+  }
+}
+
+function handleFormSubmission() {
+  var sel = $('#planet_selection')[0];
+  var submission = sel.value;
+  if (submission === $($(sel).find('option')[0]).attr('value')) {
+    alert('Please pick a planet');
+  } else {
+    console.log('You picked ' + submission + '!');
   }
 }

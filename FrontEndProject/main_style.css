@@ -98,9 +98,7 @@ div .main-sub-area {
   -webkit-flex-direction: row;
   flex-direction: row;
   justify-content: center;
-
-  border: 1px solid blue;
-  padding: 5px;
+  padding: 15px;
 }
 .item {
   padding: 5px;
@@ -153,10 +151,7 @@ cite {
   width: 100%;
   text-align: right;
 }
-section {
-  /*padding: 25px 0;*/
-  border: 1px solid green;
-}
+
 h1 {
   font-size: 2.0em;
   text-align: center;
@@ -166,17 +161,60 @@ h2 {
   text-align: center;
 }
 form {
-  border: 1px solid red;
-  display: inline-block;
+  display: block;
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
-
+fieldset {
+  border: none;
+}
+fieldset label {
+  font-size: 1.2em;
+  margin-right: 10px;
+}
+select {
+  font-size: 1.2em;
+  background-color: #FFE37E;
+  margin-right: 10px;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+select:hover {
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+input[type="submit"] {
+  font-size: 1.5em;
+  background-color: #FFE37E;
+  border: 1px solid gray;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+input[type="submit"]:active {
+  background: #dec35E;
+}
+input[type="submit"]:hover {
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
 .image-info-area {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 61%;
@@ -190,6 +228,7 @@ form {
   margin-top: 10px;
   background: #ccc url('sun-icon.png') center no-repeat;
   overflow: hidden;
+  margin: 10px;
 }
 .image-info-textarea {
   position: absolute;
@@ -208,9 +247,13 @@ footer {
   left: 50%;
   bottom: 0;
   font-weight: bolder;
-  font-size: 1.8em;
+  font-size: 1.2em;
   text-align: center;
   opacity: 0.50;
+  -webkit-box-shadow: 0px 0px 30px rgba(120, 0, 0, 0.8);
+  -moz-box-shadow: 0px 0px 30px rgba(120, 0, 0, 0.8);
+  box-shadow: 0px 0px 30px rgba(120, 0, 0, 0.8);
+  border-radius: 20px 20px 0 0;
 }
 a {
   text-decoration: none;
