@@ -89,12 +89,19 @@ function init_form() {
   }
 }
 
+/* When a planet is selected as favorite, a border is placed around the picture */
 function handleFormSubmission() {
   var sel = $('#planet_selection')[0];
   var submission = sel.value;
   if (submission === $($(sel).find('option')[0]).attr('value')) {
     alert('Please pick a planet');
   } else {
-    console.log('You picked ' + submission + '!');
+    var i = 0;
+    while (submission !== planets[i].name && i < planets.length) {
+      i++;
+    }
+    var imageItems = $('.image-info-item');
+    imageItems.css({border: 'none'});
+    $(imageItems[i]).css({border: '5px solid red'});
   }
 }

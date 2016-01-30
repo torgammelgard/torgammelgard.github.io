@@ -233,7 +233,8 @@ input[type="submit"]:hover {
 .image-info-textarea {
   position: absolute;
   height: 200px;
-  background-color: rgba(150, 150, 150, 0.3);
+  background-color: rgba(50, 50, 50, 0.8);
+  color: white;
 }
 .cool-border {
   border: 2px solid red;
