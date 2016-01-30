@@ -36,6 +36,9 @@ function init_image_infos() {
 }
 /* Adds event listeners to some elements for effect etc */
 function init_listeners() {
+  if (screen.width < 926) {
+    return;
+  }
 
   // Footer
   $('#footer').on('mouseover', function() {
@@ -43,10 +46,6 @@ function init_listeners() {
     $(this).animate({height: '125px', opacity: 1}, {duration: 800});
   });
   $('#footer').on('mouseleave', function() {
-    $(this).stop();
-    $(this).animate({height: '25px', opacity: 0.5}, {duration: 800});
-  });
-  $('#footer').on('focus', function() {
     $(this).stop();
     $(this).animate({height: '25px', opacity: 0.5}, {duration: 800});
   });
