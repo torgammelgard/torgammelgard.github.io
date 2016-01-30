@@ -80,6 +80,64 @@ header nav ul li {
   text-align: center;
   line-height: 60px;
 }
+div .main-area {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+div .main-sub-area {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  justify-content: center;
+
+  border: 1px solid blue;
+  padding: 5px;
+}
+.item {
+  padding: 5px;
+}
+.main-sub-area-right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  justify-content: space-around;
+
+  flex: 0 0 20em;
+}
+aside {
+  padding: 5px;
+}
+article {
+  margin-right: 25px;
+  flex: 0 0 35em;
+}
+table {
+  font: 24px monospace;
+  background-color: #FFC700
+}
+table td {
+  padding: 2px;
+  text-align: right;
+}
+table tr:nth-last-of-type(odd) {
+  background-color: #ccC700;
+}
+table th {
+  background-color: #aaa700;
+}
 div[class^="menu-dropdown"] {
   width: 96%;
   height: 200px;
@@ -87,23 +145,29 @@ div[class^="menu-dropdown"] {
   background-color: #FFC700;
   position: absolute;         /* relative header */
   display: none;
+  opacity: 0.7;
+}
+/* Shift the cite to the right*/
+cite {
+  display: inline-block;
+  width: 100%;
+  text-align: right;
 }
 section {
-
+  /*padding: 25px 0;*/
+  border: 1px solid green;
 }
-section h1 {
+h1 {
   font-size: 2.0em;
   text-align: center;
 }
-section h2 {
+h2 {
   font-size: 1.4em;
   text-align: center;
 }
-aside {
-
-}
 form {
   border: 1px solid red;
+  display: inline-block;
 }
 
 .image-info-area {
@@ -113,6 +177,7 @@ form {
   display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 61%;
   margin: 25px auto;
