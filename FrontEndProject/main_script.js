@@ -5,6 +5,27 @@ $(document).ready(function() {
   init_form();
 });
 
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+
 /* Data - Planet information */
 var planets = [
     {name: 'Mercury', radius: 2440, url: 'res/mercury.jpg'},
@@ -20,10 +41,8 @@ var image_info_div_bottom = {bottom: '-150px'};
 
 /* Creates an sliding effect (upwards) on the footer */
 function init_footer() {
-  $('footer').animate({height: '25px'}, {duration: 1000});
+  $('footer').animate({bottom: '-100px'}, {duration: 1000});
 }
-
-
 
 function init_image_infos() {
   $('.image-info-textarea').css(image_info_div_bottom);
@@ -31,24 +50,26 @@ function init_image_infos() {
   var image_items = $('.image-info-item');
   for (var index in planets) {
     $(image_items[index]).css({background: "url('" + planets[index].url + "') no-repeat center/200px"});
-    console.log(index);
   }
 }
 /* Adds event listeners to some elements for effect etc */
 function init_listeners() {
-  if (screen.width < 926) {
-    return;
-  }
+  /* Check if the screen is small enough to be mobile */
+
+  // var isMobile = screen.width < 926;
+  // console.log(screen.width);
 
   // Footer
-  $('#footer').on('mouseover', function() {
-    $(this).stop();
-    $(this).animate({height: '125px', opacity: 1}, {duration: 800});
-  });
-  $('#footer').on('mouseleave', function() {
-    $(this).stop();
-    $(this).animate({height: '25px', opacity: 0.5}, {duration: 800});
-  });
+  if (!isMobile.iOS()) {
+    $('#footer').on('mouseover', function() {
+      $(this).stop();
+      $(this).animate({bottom: '0px', opacity: 1}, {duration: 800});
+    });
+    $('#footer').on('mouseleave', function() {
+      $(this).stop();
+      $(this).animate({bottom: '-100px', opacity: 0.5}, {duration: 800});
+    });
+  }
 
   // Navigation
   $('nav').find('li').on('mouseover', function() {
