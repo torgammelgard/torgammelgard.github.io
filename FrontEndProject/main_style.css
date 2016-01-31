@@ -100,9 +100,6 @@ div .main-sub-area {
   justify-content: center;
   padding: 15px;
 }
-.item {
-  padding: 5px;
-}
 .main-sub-area-right {
   display: -webkit-box;
   display: -webkit-flex;
