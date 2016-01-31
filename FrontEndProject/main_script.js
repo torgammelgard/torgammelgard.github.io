@@ -49,22 +49,16 @@ function init_image_infos() {
 }
 /* Adds event listeners to some elements for effect etc */
 function init_listeners() {
-  /* Check if the screen is small enough to be mobile */
-
-  // var isMobile = screen.width < 926;
-  // console.log(screen.width);
 
   // Footer
-  if (!isMobile.iOS()) {
-    $('#footer').on('mouseover', function() {
-      $(this).stop();
-      $(this).animate({bottom: '0px', opacity: 1}, {duration: 800});
-    });
-    $('#footer').on('mouseleave', function() {
-      $(this).stop();
-      $(this).animate({bottom: '-100px', opacity: 0.5}, {duration: 800});
-    });
-  }
+  $('#footer').on('mouseover', function() {
+    $(this).stop();
+    $(this).animate({bottom: '0px', opacity: 1}, {duration: 800});
+  });
+  $('#footer').on('mouseleave', function() {
+    $(this).stop();
+    $(this).animate({bottom: '-100px', opacity: 0.5}, {duration: 800});
+  });
 
   // Navigation
   $('nav').find('li').on('mouseover', function() {
@@ -100,6 +94,20 @@ function init_listeners() {
   });
 }
 
+function init_listeners_for_mobile() {
+  $('nav').find('li').on('click', function() {
+    $("div[class^=\"menu-dropdown\"]").hide();
+    if ($(this).hasClass('color-nav-hover')) {
+      $(this).removeClass('color-nav-hover');
+    }
+    else {
+      $(this).addClass('color-nav-hover');
+      var index = $(this).data('index');
+      $(".menu-dropdown-" + $(this).data('index')).show();
+    }
+  });
+}
+
 /* Fills the selection form with data by appending option tags */
 function init_form() {
   var selection = $('#planet_selection');
@@ -130,6 +138,9 @@ $(document).ready(function() {
     init_footer();
     init_image_infos();
     init_listeners();
+  }
+  else {
+    init_listeners_for_mobile();
   }
   init_images();
   init_form();
