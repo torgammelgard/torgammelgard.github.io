@@ -35,9 +35,7 @@ var image_info_div_bottom = {bottom: '-150px'};
 
 /* Creates an sliding effect (upwards) on the footer */
 function init_footer() {
-  if (!isMobile.any()){
-    $('footer').animate({bottom: '-100px'}, {duration: 1000});
-  }
+  $('footer').animate({bottom: '-100px'}, {duration: 1000});
 }
 
 function init_image_infos() {
@@ -127,8 +125,10 @@ function handleFormSubmission() {
 }
 
 $(document).ready(function() {
-  init_footer();
-  init_image_infos();
-  init_listeners();
+  if (!isMobile.any()){
+    init_footer();
+    init_image_infos();
+    init_listeners();
+  }
   init_form();
 });
