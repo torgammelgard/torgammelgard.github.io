@@ -37,14 +37,15 @@ var image_info_div_bottom = {bottom: '-150px'};
 function init_footer() {
   $('footer').animate({bottom: '-100px'}, {duration: 1000});
 }
-
-function init_image_infos() {
-  $('.image-info-textarea').css(image_info_div_bottom);
-  $('.image-info-textarea').css({opacity: '0.25'});
+function init_images() {
   var image_items = $('.image-info-item');
   for (var index in planets) {
     $(image_items[index]).css({background: "url('" + planets[index].url + "') no-repeat center/200px"});
   }
+}
+function init_image_infos() {
+  $('.image-info-textarea').css(image_info_div_bottom);
+  $('.image-info-textarea').css({opacity: '0.25'});
 }
 /* Adds event listeners to some elements for effect etc */
 function init_listeners() {
@@ -130,5 +131,6 @@ $(document).ready(function() {
     init_image_infos();
     init_listeners();
   }
+  init_images();
   init_form();
 });
