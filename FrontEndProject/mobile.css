@@ -78,7 +78,7 @@ header nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  min-width: 500px;
+  /*min-width: 500px;*/
   font-size: 1.2em;
 }
 header nav ul li {
@@ -119,14 +119,14 @@ div .main-sub-area {
   flex-direction: column;
   justify-content: space-around;
 
-  flex: 0 0 10em;
+  flex: 1 1;
 }
 aside {
   padding: 5px;
 }
 article {
   margin-right: 25px;
-  flex: 0 0 15em;
+  flex: 1 1;
 }
 table {
   font: 1.2em monospace;
