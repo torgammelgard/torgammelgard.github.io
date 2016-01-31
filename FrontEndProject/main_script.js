@@ -101,6 +101,7 @@ function init_listeners_for_mobile() {
       $(this).removeClass('color-nav-hover');
     }
     else {
+      $('nav').find('li').removeClass('color-nav-hover');
       $(this).addClass('color-nav-hover');
       var index = $(this).data('index');
       $(".menu-dropdown-" + $(this).data('index')).show();
