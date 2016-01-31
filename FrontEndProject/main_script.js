@@ -89,12 +89,6 @@ function init_listeners() {
     $('nav').find('li').removeClass('color-nav-hover');
   });
 
-  // Form
-  $('#favorite_form').submit(function(event) {
-    event.preventDefault();
-    console.log($('#planet_selection').text());
-  });
-
   // image information items
   $('.image-info-item').hover(function() {
     $(this).find('.image-info-textarea').animate({bottom: '0px', opacity: '1'});
