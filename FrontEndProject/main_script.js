@@ -1,4 +1,5 @@
-/*
+
+/* Author Tor Gammelgård
 This script adds checks if the device is mobile or not and then adds
 functionality accordingly.
 On mobile devices the nav is responsive to clicks and on desktops there is
