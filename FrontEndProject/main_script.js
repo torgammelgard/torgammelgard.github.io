@@ -1,3 +1,12 @@
+/*
+This script adds checks if the device is mobile or not and then adds
+functionality accordingly.
+On mobile devices the nav is responsive to clicks and on desktops there is
+instead a hover effect.
+Animations and hover effects are disabled for mobile users.
+*/
+
+
 /* Found this at http://www.abeautifulsite.net/detecting-mobile-devices-with-javascript/ */
 var isMobile = {
     Android: function() {
