@@ -1,10 +1,3 @@
-$(document).ready(function() {
-  init_footer();
-  init_image_infos();
-  init_listeners();
-  init_form();
-});
-
 /* Found this at http://www.abeautifulsite.net/detecting-mobile-devices-with-javascript/ */
 var isMobile = {
     Android: function() {
@@ -132,3 +125,10 @@ function handleFormSubmission() {
     $(imageItems[i]).css({border: '5px solid red'});
   }
 }
+
+$(document).ready(function() {
+  init_footer();
+  init_image_infos();
+  init_listeners();
+  init_form();
+});

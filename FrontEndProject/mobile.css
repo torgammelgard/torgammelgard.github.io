@@ -44,11 +44,9 @@ body {
   display: flex;
   -webkit-flex-flow: column nowrap;
   flex-flow: column nowrap;
-  background: blue;
 }
 header {
   color: white;
-  /*height: 60px;*/
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -73,12 +71,10 @@ header nav ul {
   -webkit-flex-flow: row nowrap;
   flex-flow: row nowrap;
   justify-content: flex-start;
-  /*display: inline-flex;*/
   align-items: stretch;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  /*min-width: 500px;*/
   font-size: 1.2em;
 }
 header nav ul li {
@@ -108,6 +104,7 @@ div .main-sub-area {
   flex-direction: row;
   justify-content: center;
   padding: 15px;
+  background: #F7FDC6;
 }
 .main-sub-area-right {
   display: -webkit-box;
