@@ -1,21 +1,71 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="utf-8">
     <title>Github pages - Start page</title>
     <link rel="stylesheet" href="main.css" media="all" charset="utf-8">
-  </head>
-  <body class="color-primary-0">
-    <div class="main_wrapper color-primary-1">
-      <section>
-        <h1>Github pages - Tor Gammelgård</h1>
-        <h2>Listing projects</h2>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
 
-        <ul id="project_list" class="color-primary-3">
-          <li><a href="/FrontEndProject">Front-End Project</a></li>
-        </ul>
-      </section>
+<body>
+
+<div class="container-fluid color-primary-1">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Github pages
+                <small>Tor Gammelgård</small>
+            </h1>
+            <h2>Projects</h2>
+        </div>
     </div>
+    <div class="row">
+        <div class="item col-md-4">
+            <a href="/FrontEndProject">
+                <figure class="figure">
+                    <img src="res/frontend_snapshot.png" class="figure-img img-responsive img-rounded" alt="A snapshot of the frontend project.">
+                    <figcaption class="figure-caption">Frontend Project</figcaption>
+                </figure>
+            </a>
+        </div>
+        <div class="item col-md-4">
+            <a href="#">
+                <figure class="figure">
+                    <img src="res/piechart-snapshot.png" class="figure-img img-responsive img-rounded" alt="A snapshot of the MVC project.">
+                    <figcaption class="figure-caption">Piechart - A Java, MVC Project</figcaption>
+                </figure>
+            </a>
+        </div>
+        <div class="item col-md-4">
+            <a href="#">
+                <figure class="figure">
+                    <img src="res/learningAssistant-snapshot.png" class="figure-img img-responsive img-rounded" alt="A snapshot of the MongoDB project.">
+                    <figcaption class="figure-caption">Learning Assistant - A MongoDB Project</figcaption>
+                </figure>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="item col-md-4">
+            <a href="https://github.com/torgammelgard/Fireworks.git">
+                <figure class="figure">
+                    <img src="res/fireworks-snapshot.png" class="figure-img img-responsive img-rounded" alt="A snapshot of the MongoDB project.">
+                    <figcaption class="figure-caption">Fireworks - A Java Swing demo</figcaption>
+                </figure>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">Project 4</div>
+        <div class="col-md-4">Project 5</div>
+        <div class="col-md-4">Project 6</div>
+    </div>
+</div>
 
-  </body>
+
+
+<!-- scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="mainscript.js"></script>
+</body>
 </html>
