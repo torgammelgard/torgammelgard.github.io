@@ -1,0 +1,18 @@
+---
+layout: default
+nbviewer-base: https://nbviewer.jupyter.org/urls/torgammelgard.github.io/assets/notebooks/
+notebook: /assets/notebooks/
+---
+<article>
+
+    {{ content }}
+
+    View nbviewer
+    <a href="{{ layout.nbviewer-base }}{{ page.notebook-title }}.ipynb">
+        {{ page.notebook-title }}.ipynb
+    </a>
+    or
+    <a href="{{ layout.notebook }}{{ page.notebook-title}}.ipynb">
+        download notebook ({{ page.notebook-title }}.ipynb)
+    </a>
+</article>
