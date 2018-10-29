@@ -4,3 +4,4 @@
 
 layout: default
 ---
+Some content here at home
