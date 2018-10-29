@@ -2,8 +2,14 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-layout: default
+layout: home
 ---
-Some content here at home, adding something
-site.github.is_project_page : {{ site.github.is_project_page }}
-site.github.repository_name : {{ site.github.repository_name }}
+
+
+{% for post in site.posts %}
+    <ul>
+        <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+    </ul>
+{% endfor %}
